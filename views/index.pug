@@ -3,9 +3,12 @@ extends layout
 block content
   h1 Push data
   form(action="/api" method="post" name="registerForm")
-    label Name
-    input(type="text" name="login")
-    label Password
-    input(type="number" name="pwd")
+    label Car
+    input(type="text" name="car")
+    label Model
+    input(type="text" name="model")
+    label Price
+    input(type="number" name="price")
     button(type="submit" class="btn") Add to list!
+
     script(src='./javascripts/main.js')

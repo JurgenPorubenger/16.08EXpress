@@ -1,8 +1,11 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
 const jsonParser = express.json();
 
+router.get("/", function (request, response) {
+    response.render('cars');
+});
 
 router.post("/", jsonParser, function (request, response) {
     console.log(request.body);

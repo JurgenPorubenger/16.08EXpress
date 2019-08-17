@@ -5,10 +5,11 @@ document.querySelector(".btn").addEventListener("click", function (e) {
     e.preventDefault();
     //получаем данные формы
     let registerForm = document.forms["registerForm"];
-    let userName = registerForm.elements["login"].value;
-    let userAge = registerForm.elements["pwd"].value;
+    let car = registerForm.elements["car"].value;
+    let model = registerForm.elements["model"].value;
+    let price = registerForm.elements["price"].value;
     // сериализуем данные в json
-    let user = JSON.stringify({Name: userName, Password: userAge});
+    let user = JSON.stringify({car: car, model: model, price: price});
     console.log(user);
 
     let xhr = new XMLHttpRequest();
@@ -20,6 +21,7 @@ document.querySelector(".btn").addEventListener("click", function (e) {
         let receivedUser = JSON.parse(xhr.response);
         // console.log("receivedUser.userName, "-", receivedUser.userAge");   // смотрим ответ сервера
         console.log(receivedUser);
+        console.log(xhr);
     });
     xhr.send(user);
 });
