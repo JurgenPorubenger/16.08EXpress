@@ -1,5 +1,16 @@
 extends layout
 
 block content
-  h1 Push data
+  .tbl-content
+  each car in table
+      h1.name= car.car
+      h1.model= car.model
+      img.image(src=''+car.img)
 
+
+
+
+
+  //h1 Cars list #{carName()}
+   //h2(id="car_name")= carModel
+   //img(src=`${carUrl}`, class="movie-poster")
