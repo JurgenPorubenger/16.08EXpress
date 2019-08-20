@@ -2,12 +2,8 @@ extends layout
 
 block content
   h1 Push data
-  //form(action="/addCars" method="post" name="registerForm")
-    //  label Car
-  input(type="text" name="car" class="car")
-    //label Model
-  input(type="text" name="model" class="model")
-    //label Price
-  input(type="text" name="img" class="img")
-    button(type="submit" class="btn") Add to list!
+  input(type="text" placeholder="car" id="car")
+  input(type="text" placeholder="model" id="model")
+  input(type="text" placeholder="image_URL" id="img")
+  button(type="submit" class="btn") Add to list!
   script(src='./javascripts/main.js')
